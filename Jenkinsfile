@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:latest' // Use the latest Maven image from Docker Hub
-            args '-v /path/to/your/project:/workspace' // Mount the project directory as a volume
-        }
-    }
+    agent any
     
     stages {
         stage('Checkout') {
