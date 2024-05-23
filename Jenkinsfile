@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from the GitHub repository
-                git 'https://github.com/vamsi676/WebGoat-Maven.git'
+                git url: 'https://github.com/vamsi676/WebGoat-Maven', branch: 'main'
             }
         }
         
