@@ -2,11 +2,12 @@ pipeline {
     agent {
         docker {
             image 'maven:latest'
+            args '-v /usr/lib/jvm/java-17-openjdk:/usr/lib/jvm/java-17-openjdk'
         }
     }
     
     environment {
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk'
     }
     
     stages {
