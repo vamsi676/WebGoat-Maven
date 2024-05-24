@@ -1,5 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'maven:latest'
+        }
+    }
+    
+    environment {
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+    }
     
     stages {
         stage('Checkout') {
